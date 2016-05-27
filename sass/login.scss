@@ -1,0 +1,18 @@
+/* This stylesheet is for the login screen on the home page*/
+$primary-color: #E1E1E1;
+$font-stack: Tahoma;
+
+body {
+  background: $primary-color;
+  font-family: 100% $font-stack;
+}
+
+input {
+  margin: 10px 0px;
+}
+
+#login {
+  max-width: 350px;
+  padding: 25px;
+  margin: 0 auto;
+}
