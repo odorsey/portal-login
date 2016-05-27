@@ -26,9 +26,9 @@
             <form method="post" action="login.php">
               <input type="text" class="form-control" placeholder="Username" name="username">
               <input type="text" class="form-control" placeholder="Password" name="password">
-              <input type="submit" class="btn btn-success" value="Sign In">
+              <input type="submit" class="btn btn-success" value="Login">
             </form>
-            <p>Not registered? Sign up.</p>
+            <p>Not registered? <a href="#">Sign up</a>.</p>
           </div>
             <p><?php echo "PHP is working"; ?></p>
         </div>
