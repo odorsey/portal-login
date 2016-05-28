@@ -25,7 +25,7 @@
             <h1>Portal</h1>
             <form method="post" action="login.php">
               <input type="text" class="form-control" placeholder="Username" name="username">
-              <input type="text" class="form-control" placeholder="Password" name="password">
+              <input type="password" class="form-control" placeholder="Password" name="password">
               <input type="submit" class="btn btn-success" value="Login">
             </form>
             <p>Not registered? <a href="#">Sign up</a>.</p>
