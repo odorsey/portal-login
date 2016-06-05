@@ -8,7 +8,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   $username = ($_POST['username']);
   $encryptpw = sha1($_POST['password']); // need to get sha1 working on db entries
 
-  $query = "select utype from users where username= '$username' " . "and password = '$encryptpw'";
+  $query = "SELECT utype FROM users WHERE username= '$username' " . "and password = '$encryptpw'";
 
   if ($result = mysqli_query($db,$query)) {
     $num_rows = mysqli_num_rows($result);
@@ -18,23 +18,19 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
       $_SESSION['valid_user'] = $username;
       $_SESSION['user_type'] = $row[0];
     }
-
   }
-  //mysql_close($db);
+
 }
 ?>
 
-<h1>Login Page</h1>
 <?php
 if (isset($_SESSION['valid_user'])) {
   //user logged successfully
-  echo "Welcome, " . $_SESSION['valid_user'] . "<br />";
-  echo "<a href='logout.php'>Logout</a><br />";
   if ($_SESSION['user_type'] == 'Patient') {
-    echo "This is for Patients only <br />";
+    require("/portal/index.php");
   }
   if ($_SESSION['user_type'] == 'Administrator') {
-    echo "This is for Administrators only <br />";
+    require("/dashboard/index.php");
   }
 } else {
   // user is not logged in

@@ -1,0 +1,15 @@
+/* line 1, ../sass/patient.scss */
+.sidebar {
+  background: #E1E1E1;
+}
+
+/* line 5, ../sass/patient.scss */
+.nav-two {
+  text-align: center;
+}
+
+/* line 9, ../sass/patient.scss */
+.navbar-two {
+  display: inline-block;
+  float: none;
+}

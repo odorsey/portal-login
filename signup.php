@@ -22,15 +22,25 @@
   <body>
     <div class="container">
         <div class="row" id="login">
-            <h1>Portal</h1>
-            <form method="post" action="login.php">
-              <input type="text" class="form-control" placeholder="Username" name="username">
-              <input type="password" class="form-control" placeholder="Password" name="password">
-              <input type="submit" class="btn btn-success" value="Login">
+            <h1>Register for Patient Portal</h1>
+            <form method="post" action="register.php">
+              First Name: <input type="text" class="form-control" name="firstname">
+              Last Name: <input type="text" class="form-control" name="lastname">
+              Username: <input type="text" class="form-control" name="username">
+              Password: <input type="password" class="form-control" name="password">
+              Confirm Password: <input type="password" class="form-control" name="confirm">
+              Email: <input type="email" class="form-control" name="email">
+
+              <input type="submit" class="btn btn-success" value="Register">
             </form>
-            <p>Not registered? <a href="signup.php">Sign up</a>.</p>
+
+            <form action="index.php">
+              <input type="submit" class="btn btn-success" value="Back to Login">
+            </form>
+
         </div>
     </div>
+
 
     <!-- JavaScript -->
       <!-- Bootstrap -->
