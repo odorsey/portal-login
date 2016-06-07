@@ -32,7 +32,7 @@
                     if($result = mysqli_query($db,$query)) {
                       while($row = mysqli_fetch_assoc($result)) {
                         echo $row['apptdate']; ?>
-                      at <?php echo $row['appttime']; 
+                      at <?php echo $row['appttime'];
                       }
                     }
                      ?></a></h2>
@@ -42,8 +42,31 @@
                 <table class="table">
                     <tr>
                         <th>weight</th>
+                        <th>height</th>
                         <th>blood pressure</th>
-                        <th>medications</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <?php
+                          $query= "SELECT weight, height, bp, users.uid from health, users where users.uid = health.uid AND users.username= 'testPatient'";
+
+                          if($result = mysqli_query($db, $query)) {
+                            while($row = mysqli_fetch_assoc($result)) {
+                              echo $row['weight'];
+                        ?>
+                      </td>
+                      <td>
+                        <?php
+                          echo $row['height'];
+                        ?>
+                      </td>
+                      <td>
+                        <?php
+                           echo $row['bp'];
+                            }
+                          }
+                        ?>
+                    </td>
                     </tr>
                 </table>
             </div>
