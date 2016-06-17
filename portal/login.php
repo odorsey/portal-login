@@ -1,8 +1,9 @@
 <?php
+session_start();
 //require("escape.php");
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
-  require("connection.php");
+  require("../connection.php");
 
   // try to log the user in
   $username = ($_POST['username']);
@@ -13,7 +14,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   if ($result = mysqli_query($db,$query)) {
     $num_rows = mysqli_num_rows($result);
     if ($num_rows > 0) {
-      session_start();
       $row = mysqli_fetch_row($result);
       $_SESSION['valid_user'] = $username;
       $_SESSION['user_type'] = $row[0];
@@ -27,10 +27,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 if (isset($_SESSION['valid_user'])) {
   //user logged successfully
   if ($_SESSION['user_type'] == 'Patient') {
-    require("/portal/index.php");
+    require("index.php");
   }
+
   if ($_SESSION['user_type'] == 'Administrator') {
-    require("/dashboard/index.php");
+    require("../dashboard/index.php");
   }
 } else {
   // user is not logged in

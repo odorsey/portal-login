@@ -1,16 +1,16 @@
 /* This stylesheet is for the login screen on the home page*/
-/* line 6, ../sass/login.scss */
+/* line 4, ../sass/login.scss */
 body {
-  font-family: 100% Tahoma;
   color: #3C3D3E;
 }
 
-/* line 11, ../sass/login.scss */
+/* line 8, ../sass/login.scss */
 input {
   margin: 10px 0px;
+  max-width: 350px;
 }
 
-/* line 15, ../sass/login.scss */
+/* line 13, ../sass/login.scss */
 #login {
   max-width: 350px;
   padding: 25px;

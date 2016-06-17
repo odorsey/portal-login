@@ -1,15 +1,13 @@
 /* This stylesheet is for the login screen on the home page*/
-$primary-color: #E1E1E1;
 $font-color: #3C3D3E;
-$font-stack: Tahoma;
 
 body {
-  font-family: 100% $font-stack;
   color: $font-color;
 }
 
 input {
   margin: 10px 0px;
+  max-width: 350px;
 }
 
 #login {
