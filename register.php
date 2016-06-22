@@ -3,11 +3,11 @@ if (!empty($_POST)) {
   require ("connection.php");
 
   //assign values
-  $firstname = ($_POST['firstname']);
-  $lastname = ($_POST['lastname']);
-  $username = ($_POST['username']);
-  $encryptpw = sha1($_POST['password']);
-  $email = ($_POST['email']);
+  $firstname = htmlentities(strip_tags($_POST['firstname']));
+  $lastname = htmlentities(strip_tags($_POST['lastname']));
+  $username = htmlentities(strip_tags($_POST['username']));
+  $encryptpw = sha1(htmlentities(strip_tags($_POST['password']));
+  $email = htmlentities(strip_tags($_POST['email']));
   $utype = "Patient";
 
   $query = "insert into users values";

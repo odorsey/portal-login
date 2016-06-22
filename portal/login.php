@@ -1,13 +1,12 @@
 <?php
 session_start();
-//require("escape.php");
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
   require("../connection.php");
 
   // try to log the user in
-  $username = ($_POST['username']);
-  $encryptpw = sha1($_POST['password']); // need to get sha1 working on db entries
+  $username = stripslashes($_POST['username']);
+  $encryptpw = sha1(stripslashes($_POST['password']));
 
   $query = "SELECT utype FROM users WHERE username= '$username' " . "and password = '$encryptpw'";
 
@@ -37,10 +36,15 @@ if (isset($_SESSION['valid_user'])) {
   // user is not logged in
 if (isset($username)) {
     // login failure
-    echo "Incorrect username/password.";
+    echo "Incorrect username/password. You will be redirected to the login page shortly.";
+    header("Refresh: 3; url=http://localhost:8080/portal-login/");
+    exit(0);
 } else {
     // not logged in
-    echo "Not sure how you got here, but you're not logged in.";
+    echo "Not sure how you got here, but you're not logged in. You will be redirected to the login page shortly.";
+    header("Refresh: 3; url=http://localhost:8080/portal-login/");
+    exit(0);
   }
 }
+
 ?>

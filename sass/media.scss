@@ -9,12 +9,15 @@
     display: block;
     padding: 20px;
     overflow-x: hidden;
-    background: #D5D5D5;
+    background: $med-gray;
     color: $dark-gray;
   }
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 1.25em;
+  }
   .sidebar {
     display: none;
   }

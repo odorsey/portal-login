@@ -39,7 +39,7 @@ require("../connection.php"); ?>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Patient Portal</a>
+            <a class="navbar-brand" href="index.php">Patient Portal</a>
         </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,7 +50,7 @@ require("../connection.php"); ?>
             </li>
 
             <li>
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar-o fa-fw"></i> Appointments</a>
+                <a href="appointments.php"><i class="fa fa-calendar-o fa-fw"></i>Appointments</a>
             </li>
 
             <li>
@@ -62,7 +62,7 @@ require("../connection.php"); ?>
             </li>
 
             <li>
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-success pull-right">5</span><i class="fa fa-envelope fa-fw"></i>Messages</a>
+                <a href="#"><span class="label label-success pull-right">5</span><i class="fa fa-envelope fa-fw"></i>Messages</a>
             </li>
 
             <li>
