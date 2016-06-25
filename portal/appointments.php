@@ -1,7 +1,7 @@
 <?php require ("header.php"); ?>
   <div class="container-fluid">
     <?php require("sidebar.php"); ?>
-    <div class="col-md-10 col-sm-12 main">
+    <div class="col-md-10 col-sm-8 col-xs-12 main">
       <h1>Appointments</h1>
         <table class="table table-condensed">
           <thead>

@@ -20,12 +20,18 @@ body {
   font-family: $font;
 }
 
+img {
+  vertical-align: top;
+  width: 25%;
+  height: auto;
+}
+
 h1 {
   font-size: 2em;
 }
 
 .hello {
-  width: 20%;
+  vertical-align: top;
   display: inline;
 }
 
@@ -101,17 +107,12 @@ tr.header{
 }
 
 // Content
-#appt {
-  display: inline;
-  float: right;
-}
-
 .main {
   float: right;
 }
 
 .report {
-  margin: 5% 5%;
+  margin: 1% 2%;
 }
 
 .weight, .height, .bp {
@@ -126,12 +127,12 @@ tr.header{
 
 
 // Appointment Jumbotron
-.jumbotron {
-  padding: 0%;
-  max-height: auto;
-  float: right;
+#appt {
   display: inline;
+  padding: 1% 2%;
+  margin: 2%;
   background-color: $alert-yellow;
+  border: 1px solid $med-gray;
 
   a {
     color: $dark-gray;
