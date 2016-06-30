@@ -1,6 +1,6 @@
 <?php
   $h = 'localhost';
-  $u = '';
+  $u = 'root';
   $p = '';
   $dbname = 'portal';
   $db = mysqli_connect($h, $u, $p, $dbname);
